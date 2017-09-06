@@ -4,8 +4,8 @@
 
 # Category: Website.
 website:
-  title: Typing
-  description: Typing - A Theme for Jekyll
+  title: Brewing Bits
+  description: Brewing delicious code for you.
   launch: 2016
   avatar: logo_export.svg
   metatag:
@@ -23,7 +23,7 @@ website:
       id:  # tracking id, e.g. "UA-000000-01"
       events: true # Use: true | false . Events Google Analytics
   author:
-    image: typing.svg
+    image: logo_export.svg
   strings:
     sidebar:
       title: |
@@ -31,7 +31,7 @@ website:
       links:
         home: Hello
     footer:
-      message: Simplicity is fashionable.
+      message: Brewing delicious lines of code.
     comments:
       title: Leave a comment on this post
       disable: The comment for this post is disabled.
@@ -49,9 +49,9 @@ website:
     post:
       author:
         title: Author
-        name: Typing Theme
+        name: Paul
         bio: |
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora non aut eos voluptas debitis unde impedit aliquid ipsa.
+          Independent Webdeveloper based in Kiel, Germany. Come read my stuff!
     search:
       input:
         placeholder: ['Search in','article(s)']
@@ -88,12 +88,4 @@ userdata:
         id: twitter
         icon: fa-twitter
         url: https://twitter.com/BrewingBits/
-      - title: Google Plus
-        id: gplus
-        icon: fa-google-plus
-        url: https://github.com/williamcanin/typing-theme
-      - title: LinkedIn
-        id: linkedin
-        icon: fa-linkedin
-        url: https://github.com/williamcanin/typing-theme
 
