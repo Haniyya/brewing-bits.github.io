@@ -7,7 +7,7 @@ website:
   title: Typing
   description: Typing - A Theme for Jekyll
   launch: 2016
-  avatar: typing.svg
+  avatar: logo_export.svg
   metatag:
     google-site-verification:
     type: "WebSite"
@@ -27,7 +27,7 @@ website:
   strings:
     sidebar:
       title: |
-        Hey, <br> I'm Typing.
+        Grab a seat, <br> have a cup.
       links:
         home: Hello
     footer:
@@ -83,11 +83,11 @@ userdata:
       - title: GitHub
         id: github
         icon: fa-github
-        url: https://github.com/williamcanin/typing-theme
+        url: https://github.com/Haniyya
       - title: Twitter
         id: twitter
         icon: fa-twitter
-        url: https://github.com/williamcanin/typing-theme
+        url: https://twitter.com/BrewingBits/
       - title: Google Plus
         id: gplus
         icon: fa-google-plus
