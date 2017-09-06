@@ -23,14 +23,24 @@ script: [projects.js]
 permalink: /projects/
 ---
 
-If you wanted to know about my favorite chores, this is the correct page. You find my designs of my own, or participation.
-
-##  Major collaborations
-
-**[Typing Theme](https://github.com/williamcanin/typing-theme)**: Creating themes for Jekyll   
+Here are some things I work(ed) on. So you can judge me by my lines.
 
 
-|[Typing Jekyll Template](https://github.com/williamcanin/typing-jekyll-template){:target="_blank"} <i class="fa fa-external-link"></i>|
+**[Flexparser](https://github.com/lokalportal/flexparser)**: Parser DSL for ruby
+
+
+|[Flexparser](https://github.com/lokalportal/flexparser){:target="_blank"} <i class="fa fa-external-link"></i>|
 --------------------------|----------------------------
 | **Status**: <label style="color:green;">Active</label> |
-| **Description**: Typing, is a template for Jekyll built especially for those who want to have a blog and pages quickly and lightly. |
+| **Description**: Flexparser is a parser-dsl for ruby that allows you to
+quickly write robust, flexible XML parsers. |
+
+**[Noble Names](https://github.com/Haniyya/noble_names)**: Correctly capitalize
+names in any language
+
+
+|[Noble Names](https://github.com/Haniyya/noble_names){:target="_blank"} <i class="fa fa-external-link"></i>|
+--------------------------|----------------------------
+| **Status**: <label style="color:green;">Active</label> |
+| **Description**: `noble_names` is a library for ruby that lets you correctly
+capitalize names in any language. |
