@@ -5,7 +5,7 @@
 # --------------------------------------------------------------
 
 source "https://rubygems.org"
-ruby RUBY_VERSION
+ruby '2.4.1'
 
 gem "jekyll"
 gem "pygments.rb"
