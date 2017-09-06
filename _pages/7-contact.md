@@ -19,4 +19,4 @@ script: [contact.js]
 permalink: /contact/
 ---
 
-Here you can send me an email to ask questions or contact me for service.
+Here you can send me an email to ask questions or contact me.
