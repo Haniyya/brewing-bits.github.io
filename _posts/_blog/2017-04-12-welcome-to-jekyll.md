@@ -4,8 +4,8 @@ title:  "Welcome to Jekyll!"
 date:   2017-04-12 05:16:01 -0300 
 categories: blog
 tags: ['example','welcome','jekyll', 'typing', 'responsive', 'simple']
-published: true
-comments: true 
+published: false
+comments: true
 excerpted: |
     You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site ...
 day_quote:
