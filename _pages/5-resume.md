@@ -19,26 +19,18 @@ menu: true
 btnprint: true
 
 excerpt: |
-    This is my resume. On this page you can print using the browser shortcut (Ctrl + P) or using the 'Print' Button as well.
+    Some things to know about me, should you care.
 
 tcontents:
   enable: true
   title: Table Of Contents
   links:
-    - name: Personal Data
+    - name: Data about me
       id: "#personal-data"
-    - name: Biography
-      id: "#biography"
-    - name: Objetive
-      id: "#objetive"      
-    - name: Education
-      id: "#education"
     - name: Skills
       id: "#skills"
     - name: Projects
       id: "#projects"
-    - name: Languages
-      id: "#languages"   
 
 published: true
 
@@ -48,52 +40,21 @@ script: [resume.js]
 permalink: /resume/
 ---
 
-#  Typing
-### A theme for Jekyll
+## Data about me
 
-<br>
+**Nationality**: German
 
-## Personal Data
+**Location**: Kiel, Germany
 
-**Nationality**: Brazilian   
-**Date of Birth**: 2017/04/05   
-**Marital Status**: Single   
-**Home Address**: Lorem, Lorem Ipsum, 789 / Dolor  
-**Country**: Brazil   
-**Province**: Lorem Ipsum/LI   
-**Telephone**: +55 011 1234 5678   
-**Email**: your-email@example.com   
-**Website**: [my-web-site.domain](http://williamcanin.com)   
+**Email**: [paul@brewing-bits.com](mailto:paul@brewing-bits.com)
+
+**Website**: [brewing-bits.com](http://brewing-bits.com)
 
 
-## Biography
-
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate aliquid, alias voluptatibus vel eligendi eveniet. Quas rem, repellendus deleniti nostrum minima delectus maxime fugiat, voluptates modi, laudantium, natus eligendi <sequi class="Lorem">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At non quibusdam repellat commodi veniam ab voluptate odio recusandae earum, magnam dolore architecto dolorem. Sint dolor deserunt, molestiae soluta, consequatur non!</sequi>
-
-
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi unde earum itaque saepe voluptatum distinctio soluta provident repudiandae mollitia similique repellat eum incidunt quo, tenetur quasi voluptatem sed animi repellendus.
-
-## Objetive
-
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias eum, quae delectus, et sit laborum voluptas neque, nemo itaque quia a. Quas harum earum, quasi minus aspernatur laboriosam aperiam nam.
-
-## Education
-
-### Ipsum Dolor
-
-*Lorem, Lorem — Lorem Ipsum ‘14*
-
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias quod voluptatum earum asperiores esse labore impedit eos cum obcaecati unde sequi ad beatae magni aut iure, dolorum doloribus nulla, officia!
-
-### Ipsum Dolor
-
-*Lorem, Lorem — Lorem Ipsum ‘14*
-
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias quod voluptatum earum asperiores esse labore impedit eos cum obcaecati unde sequi ad beatae magni aut iure, dolorum doloribus nulla, officia!
 
 ## Skills
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil magni incidunt commodi quod libero atque architecto, vero est unde, qui inventore assumenda quaerat perferendis ab reprehenderit quis excepturi dolores, labore.
+Some technical things that I learned over the years.
 
 **Web Development:**   
 
@@ -101,8 +62,6 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil magni incidunt c
 {% label Bootstrap|16px %}
 {% label CSS3|16px %}
 {% label JQuery|16px %}
-{% label LESS|16px %}
-{% label Angular|16px %}
 {% label SCSS|16px %}
 
 
@@ -110,27 +69,15 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil magni incidunt c
 
 {% label Ruby|16px %}
 {% label Java|16px %}
+{% label Rust|16px %}
 
-
-
-### Lorem Ipsum
-
-*Lorem ipsum dolor sit amet*
-
-*August 2014 – December 2015*
-
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut architecto quis sit in qui, omnis repudiandae nam excepturi veritatis enim expedita voluptates repellat. Ipsam quae tempore nihil, quos voluptates commodi.
 
 ## Projects
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus ab odit sed maxime possimus ducimus doloribus minima dolore quaerat, consequatur repellat eius saepe, nisi architecto nemo animi, et quidem. At!
+I'll just count the things that I know someone uses. For more digital rambling
+you can look at my [github](https://github.com/Haniyya).
 
-* [Lorem](http://williamcanin.github.io/typing-theme){:target="_blank"} - Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-* [Lorem](http://williamcanin.github.io/typing-theme){:target="_blank"} - Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-
-
-## Languages
-
-* **English** - Intermediary
-* **Latim** - I do not know Latin, it was only for testing.
-* **Portuguese** - Native
+* [Flexparser](http://github.com/lokalportal/flexparser){:target="_blank"} - A
+    ruby dsl for writing flexible, robust XML parsers.
+* [Noble Names](http://github.com/Haniyya/noble_names){:target="_blank"} - A
+    library for correctly capitalizing names in different languages.
