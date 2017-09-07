@@ -11,7 +11,7 @@ set :use_sudo, false
 role :web, '46.101.42.193'
 
 set :user, 'deploy'
-set :deploy_to, "/home/#{user}/blog"
+set :deploy_to, "/home/deploy/blog"
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
