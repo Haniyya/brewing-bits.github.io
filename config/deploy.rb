@@ -43,3 +43,15 @@ set :deploy_to, "/home/deploy/blog"
 
 # Default value for keep_releases is 5
 # set :keep_releases, 5
+
+namespace :deploy do
+  task :update_jekyll do
+    on roles(:app) do
+      within "#{deploy_to}/current" do
+        execute :bundle, "exec jekyll build"
+      end
+    end
+  end
+
+  after "deploy:symlink:release", "deploy:update_jekyll"
+end
