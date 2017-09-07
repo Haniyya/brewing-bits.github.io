@@ -4,6 +4,5 @@ node_modules
 _vendor
 dev
 .jekyll-metadata
-Gemfile.lock
 deploy/deploy
 log/
