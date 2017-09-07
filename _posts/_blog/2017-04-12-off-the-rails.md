@@ -31,6 +31,24 @@ could not write a simple ruby web app, without some framework giving me
 guidance. So I thought, why not try something new and write a JSON-Api,
 completely without rails.
 
+## Requirements
+
+For now we don't have a lot of requirements. We'll be building everyones
+favorite: A digital library of books. So what we need for now is:
+
+1. Persistence
+1. Routing
+1. Params handling
+1. JSON rendering
+1. Some business logic in the form of models
+
+Some things I'll save for later posts:
+
+1. Authentication
+1. Authorization
+1. Some kind of gui
+1. tests
+
 ## What will be used
 
 It could be interesting to restrict yourself to nothing but the `STDlib`, but I
@@ -47,28 +65,10 @@ chance to try out a few gems that have caught my eye for a while now:
 This list might very well be expanded in the future, but for now it should
 fulfill our humble requirements.
 
-## Requirements
-
-For now we don't have a lot of requirements. We'll be building everyones
-favorite: A digital library of books. So what we need for now is:
-
-1. Persistence
-1. Routing
-1. Params handling
-1. Some business logic in the form of models
-
-Some things I'll save for later posts:
-
-1. Authentication
-1. Authorization
-1. Some kind of gui
-1. tests
-
 ## Come along for the ride!
 
 If you want to follow along, I'll push all the code to [Brewing Bits
 github][brewing_github], where you can follow commit by commit.
-
 
 
 {% endpost #9D9D9D %}
