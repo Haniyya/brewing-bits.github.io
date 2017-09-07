@@ -10,6 +10,7 @@ ruby '2.4.1'
 gem "jekyll"
 gem "pygments.rb"
 gem "rake"
+gem 'capistrano', require: false
 group :jekyll_plugins do
    gem "jekyll-coffeescript"
    gem "jekyll-jsminify"
