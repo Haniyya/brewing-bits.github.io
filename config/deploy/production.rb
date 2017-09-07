@@ -59,3 +59,6 @@
 #     auth_methods: %w(publickey password)
 #     # password: "please use keys"
 #   }
+set :ssh_options, {
+  user: 'deploy'
+}
