@@ -33,10 +33,10 @@ avatar:
 # Settings to share the post on the social networks below.
 share_social:
   enable: true
-  facebook: true
-  linkedin: true
+  facebook: false
+  linkedin: false
   twitter: true
-  googleplus: true
+  googleplus: false
 
 
 # Enable or disable icons on every website. Use:  true | false
