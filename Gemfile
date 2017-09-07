@@ -11,6 +11,7 @@ gem "jekyll"
 gem "pygments.rb"
 gem "rake"
 gem 'capistrano', require: false
+gem 'capistrano-jekyll'
 group :jekyll_plugins do
    gem "jekyll-coffeescript"
    gem "jekyll-jsminify"

@@ -1,0 +1,55 @@
+# Logfile created on 2017-09-07 13:01:26 +0200 by logger.rb/56815
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-09-07 13:01:26 +0200 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [ceab08a4] Running /usr/bin/env mkdir -p /tmp on 46.101.42.193
+ DEBUG [ceab08a4] Command: /usr/bin/env mkdir -p /tmp
+  INFO [ee0eeab7] Running /usr/bin/env #<StringIO:0x0056216bdad148> /tmp/git-ssh-Brewing_Bits-production-paul.sh on 46.101.42.193
+ DEBUG [ee0eeab7] Command: /usr/bin/env #<StringIO:0x0056216bdad148> /tmp/git-ssh-Brewing_Bits-production-paul.sh
+  INFO [71d4d677] Running /usr/bin/env chmod 700 /tmp/git-ssh-Brewing_Bits-production-paul.sh on 46.101.42.193
+ DEBUG [71d4d677] Command: /usr/bin/env chmod 700 /tmp/git-ssh-Brewing_Bits-production-paul.sh
+  INFO [fd904109] Running /usr/bin/env git ls-remote git@bitbucket.org:Haniyya/brewing-bits.git HEAD on 46.101.42.193
+ DEBUG [fd904109] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-Brewing_Bits-production-paul.sh" ; /usr/bin/env git ls-remote git@bitbucket.org:Haniyya/brewing-bits.git HEAD )
+  INFO [0655a9d0] Running /usr/bin/env mkdir -p /home/deploy/blog/shared /home/deploy/blog/releases on 46.101.42.193
+ DEBUG [0655a9d0] Command: /usr/bin/env mkdir -p /home/deploy/blog/shared /home/deploy/blog/releases
+ DEBUG [677f3c92] Running [ -f /home/deploy/blog/current/REVISION ] on 46.101.42.193
+ DEBUG [677f3c92] Command: [ -f /home/deploy/blog/current/REVISION ]
+ DEBUG [db9514a7] Running /usr/bin/env cat /home/deploy/blog/current/REVISION 2>/dev/null on 46.101.42.193
+ DEBUG [db9514a7] Command: /usr/bin/env cat /home/deploy/blog/current/REVISION 2>/dev/null
+ DEBUG [58b82010] Running [ -f /home/deploy/blog/repo/HEAD ] on 46.101.42.193
+ DEBUG [58b82010] Command: [ -f /home/deploy/blog/repo/HEAD ]
+  INFO The repository mirror is at /home/deploy/blog/repo
+ DEBUG [8a7c353b] Running if test ! -d /home/deploy/blog/repo; then echo "Directory does not exist '/home/deploy/blog/repo'" 1>&2; false; fi on 46.101.42.193
+ DEBUG [8a7c353b] Command: if test ! -d /home/deploy/blog/repo; then echo "Directory does not exist '/home/deploy/blog/repo'" 1>&2; false; fi
+  INFO [5a54028a] Running /usr/bin/env git remote set-url origin git@bitbucket.org:Haniyya/brewing-bits.git on 46.101.42.193
+ DEBUG [5a54028a] Command: cd /home/deploy/blog/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-Brewing_Bits-production-paul.sh" ; /usr/bin/env git remote set-url origin git@bitbucket.org:Haniyya/brewing-bits.git )
+  INFO [712eb51c] Running /usr/bin/env git remote update --prune on 46.101.42.193
+ DEBUG [712eb51c] Command: cd /home/deploy/blog/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-Brewing_Bits-production-paul.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [dee31e92] Running if test ! -d /home/deploy/blog/repo; then echo "Directory does not exist '/home/deploy/blog/repo'" 1>&2; false; fi on 46.101.42.193
+ DEBUG [dee31e92] Command: if test ! -d /home/deploy/blog/repo; then echo "Directory does not exist '/home/deploy/blog/repo'" 1>&2; false; fi
+  INFO [9050fe5f] Running /usr/bin/env mkdir -p /home/deploy/blog/releases/20170907110126 on 46.101.42.193
+ DEBUG [9050fe5f] Command: cd /home/deploy/blog/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-Brewing_Bits-production-paul.sh" ; /usr/bin/env mkdir -p /home/deploy/blog/releases/20170907110126 )
+  INFO [6b66a92b] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/deploy/blog/releases/20170907110126 on 46.101.42.193
+ DEBUG [6b66a92b] Command: cd /home/deploy/blog/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-Brewing_Bits-production-paul.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/deploy/blog/releases/20170907110126 )
+ DEBUG [0893dfca] Running if test ! -d /home/deploy/blog/repo; then echo "Directory does not exist '/home/deploy/blog/repo'" 1>&2; false; fi on 46.101.42.193
+ DEBUG [0893dfca] Command: if test ! -d /home/deploy/blog/repo; then echo "Directory does not exist '/home/deploy/blog/repo'" 1>&2; false; fi
+ DEBUG [53c25c00] Running /usr/bin/env git rev-list --max-count=1 master on 46.101.42.193
+ DEBUG [53c25c00] Command: cd /home/deploy/blog/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-Brewing_Bits-production-paul.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [238947da] Running if test ! -d /home/deploy/blog/releases/20170907110126; then echo "Directory does not exist '/home/deploy/blog/releases/20170907110126'" 1>&2; false; fi on 46.101.42.193
+ DEBUG [238947da] Command: if test ! -d /home/deploy/blog/releases/20170907110126; then echo "Directory does not exist '/home/deploy/blog/releases/20170907110126'" 1>&2; false; fi
+  INFO [0eff5072] Running /usr/bin/env echo "" >> REVISION on 46.101.42.193
+ DEBUG [0eff5072] Command: cd /home/deploy/blog/releases/20170907110126 && /usr/bin/env echo "" >> REVISION
+ DEBUG [ea56d3b1] Running if test ! -d /home/deploy/blog/releases/20170907110126; then echo "Directory does not exist '/home/deploy/blog/releases/20170907110126'" 1>&2; false; fi on 46.101.42.193
+ DEBUG [ea56d3b1] Command: if test ! -d /home/deploy/blog/releases/20170907110126; then echo "Directory does not exist '/home/deploy/blog/releases/20170907110126'" 1>&2; false; fi
+  INFO [35f906ce] Running /usr/bin/env jekyll build on 46.101.42.193
+ DEBUG [35f906ce] Command: cd /home/deploy/blog/releases/20170907110126 && /usr/bin/env jekyll build
+  INFO [cab85817] Running /usr/bin/env ln -s /home/deploy/blog/releases/20170907110126 /home/deploy/blog/releases/current on 46.101.42.193
+ DEBUG [cab85817] Command: /usr/bin/env ln -s /home/deploy/blog/releases/20170907110126 /home/deploy/blog/releases/current
+  INFO [fe56fe09] Running /usr/bin/env mv /home/deploy/blog/releases/current /home/deploy/blog on 46.101.42.193
+ DEBUG [fe56fe09] Command: /usr/bin/env mv /home/deploy/blog/releases/current /home/deploy/blog
+ DEBUG [b484ca82] Running /usr/bin/env ls -x /home/deploy/blog/releases on 46.101.42.193
+ DEBUG [b484ca82] Command: /usr/bin/env ls -x /home/deploy/blog/releases
+ DEBUG [22d1bb87] Running if test ! -d /home/deploy/blog/releases; then echo "Directory does not exist '/home/deploy/blog/releases'" 1>&2; false; fi on 46.101.42.193
+ DEBUG [22d1bb87] Command: if test ! -d /home/deploy/blog/releases; then echo "Directory does not exist '/home/deploy/blog/releases'" 1>&2; false; fi
+  INFO [cafb58ec] Running /usr/bin/env echo "Branch master (at ) deployed as release 20170907110126 by paul" >> /home/deploy/blog/revisions.log on 46.101.42.193
+ DEBUG [cafb58ec] Command: cd /home/deploy/blog/releases && /usr/bin/env echo "Branch master (at ) deployed as release 20170907110126 by paul" >> /home/deploy/blog/revisions.log
