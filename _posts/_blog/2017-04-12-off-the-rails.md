@@ -3,7 +3,7 @@ layout: post
 title:  "Off the Rails! Part 1."
 date:   2017-09-06 05:16:01 -0100
 categories: blog
-tags: ['ruby', 'rails', 'grape', 'sequel', 'programming']
+tags: ['ruby', 'rails', 'grape', 'programming']
 published: true
 comments: true
 excerpted: |
@@ -36,14 +36,14 @@ completely without rails.
 For now we don't have a lot of requirements. We'll be building everyones
 favorite: A digital library of books. So what we need for now is:
 
-1. Persistence
 1. Routing
 1. Params handling
 1. JSON rendering
-1. Some business logic in the form of models
 
 Some things I'll save for later posts:
 
+1. Persistence
+1. Independent business logic
 1. Authentication
 1. Authorization
 1. Some kind of gui
@@ -58,9 +58,7 @@ chance to try out a few gems that have caught my eye for a while now:
 1. [Grape][grape] is a JSON-API framework for ruby. It is similar to rails in
    that it is pretty opinionated, but it does not dictate a rigid structure and
    (in this example), will only be responsible for routing and handling params.
-1. [Sequel][sequel] is an ORM (so similar to ActiveRecord if you are comming from
-   rails), that will make it easier for us handle persistence.
-1. [Rake][rake] for handling development tasks.
+1. [Rack][rack-interface] for getting a basic server running.
 
 This list might very well be expanded in the future, but for now it should
 fulfill our humble requirements.
@@ -70,11 +68,110 @@ fulfill our humble requirements.
 If you want to follow along, I'll push all the code to [Brewing Bits
 github][brewing_github], where you can follow commit by commit.
 
+## Starting real simple
+
+To see what we could do if we didn't even use Grape, and to get into a habit of
+developing iteratively, we will first implement the most basic JSON-API we can.
+
+Now we can start our server using `rackup`:
+```bash
+$ cd the-folder-where-the-config-file-is/
+$ rackup
+Puma starting in single mode...
+* Version 3.10.0 (ruby 2.3.3-p222), codename: Russell's Teapot
+* Min threads: 0, max threads: 16
+* Environment: development
+* Listening on tcp://localhost:9292
+Use Ctrl-C to stop
+```
+And we can see whether it works or not using `curl`:
+```bash
+$ curl http://localhost:9292
+{"message"=>"Hello, world!"}
+
+```
+So what did we just do here? We implemented the
+["Rack-interface"][rack-interface] by creating an
+object that responds to `#call(env)` and returns an array of `[status, headers,
+body]`. "But wait!" you say. Where do we actually pass `env`? We don't have to
+when using a `proc`. This is a neat little aspect of `Procs`:
+
+> For procs created using lambda or ->() an error is generated if the wrong number of parameters are passed to the proc. For procs created using Proc.new or Kernel.proc, extra parameters are silently discarded and missing parameters are set to nil.
+
+As per the [docs][ruby-docs].
+So now we have a working API! But it is a pretty boring one. And since I wanted
+to show off Grape, we'll quickly replace our `Proc` with something a little more
+sophisticated.
+Since we don't have any real dependency management yet, make sure to
+```bash
+$ gem install grape
+```
+And then replace your proc with the most basic grape-API:
+
+
+This primitive little thing already emulates the Proc we used above. Which we
+can test by just repeating the same `curl` line from above.
+To see how easy it is to add params using grape, well add the ability to greet
+someone personally.
+
+We added a route param called `name`, that we then interpolate into the message.
+We can access all params through the `params` object, whether they are part of
+the route or not.
+So now we restart our server and get out `curl`:
+```bash
+$ curl http://localhost:9292/paul
+{"message" => "Hello, paul!"}
+```
+Alright. So we can define routes and parse params. Whats next? Maybe we should
+see if we can't POST something to the server. How about a book. And while we are
+at it, we should start extracting our logic from `config.ru`.
+
+Here we will use `config.ru` just to load dependencies and then start our
+application.
+
+We moved the API to another file and made a few adjustments.
+1. We defined a `books` helper to keep track of all the books.
+1. We used the `resource` method to define our routes in the `/books` namespace.
+1. We added a `POST` route to post a book into our books.
+1. We added an index route to see if our POST did anything.
+1. We added `format :json` so that grape automatically converts our return
+   values to JSON.
+
+So you know the drill: Restart the server and get your `curl` out:
+```bash
+$  curl --data "title=Lord of the Rings&author=J. R. R. Tolkien" http://localhost:9292/books
+[{"author":"J. R. R. Tolkien","title":"Lord of the Rings"}]
+$ curl http://localhost:9292/books
+{"books":[]}
+```
+So this didn't work. The reason for that is that similar to rails controllers,
+instances of `Grape::API` don't persist through multiple requests. So `@books`
+is being reset at every request. Which makes a lot of sense if there are
+multiple people requesting multiple things. You wouldn't want them all to share
+a request environment. One way to get around this, is having an object that runs
+independent from the API to handle the data.
+
+Here we have to assign the instance of `MyApp` to a constant so that
+1. We can reference it globally
+1. It will not get garbage collected after every request.
+
+And with those few lines, we at least have persistence for as long as the server
+runs! Neat!
+```bash
+$  curl --data "title=Lord of the Rings&author=J. R. R. Tolkien" http://localhost:9292/books
+[{"author":"J. R. R. Tolkien","title":"Lord of the Rings"}]
+$ curl http://localhost:9292/books
+{"books":[{"author":"J. R. R. Tolkien","title":"Lord of the Rings"}]}
+```
+
+This should be enough for now. Watch out for part 2 where we will add real
+database persistence using [`sequel`] and all the pain that will bring.
 
 {% endpost #9D9D9D %}
 
 [ruby_on_rails]: http://rubyonrails.org/
 [grape]: https://github.com/ruby-grape/grape
-[sequel]: http://sequel.jeremyevans.net/
 [rake]: https://github.com/ruby/rake
 [brewing_github]: https://github.com/BrewingBits
+[ruby-docs]: http://ruby-doc.org/core-2.4.1/Proc.html#method-i-call
+[rack-interface]: https://rack.github.io/
