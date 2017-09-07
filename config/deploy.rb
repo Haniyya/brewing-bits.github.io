@@ -46,7 +46,7 @@ set :deploy_to, "/home/deploy/blog"
 
 namespace :deploy do
   task :update_jekyll do
-    on roles(:app) do
+    on roles(:web) do
       within "#{deploy_to}/current" do
         execute :bundle, "exec jekyll build"
       end
