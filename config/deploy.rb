@@ -45,10 +45,18 @@ set :deploy_to, "/home/deploy/blog"
 # set :keep_releases, 5
 
 namespace :deploy do
-  task :update_jekyll do
+  task :clean_jekyll do
     on roles(:web) do
       within "#{deploy_to}/current" do
-        execute :bundle, "exec jekyll build"
+        execute :bundle, 'exec jekyll clean'
+      end
+    end
+  end
+
+  task :update_jekyll => :clean_jekyll do
+    on roles(:web) do
+      within "#{deploy_to}/current" do
+        execute :bundle, 'exec jekyll build'
       end
     end
   end
