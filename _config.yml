@@ -16,6 +16,7 @@
 
 # baseurl: "/typing-jekyll-template" # the subpath of your site, e.g. /blog
 url: "https://brewing-bits.com" # the base hostname & protocol for your site, e.g. http://example.com
+disqus_url: "brewing-bits-com"
 encoding: utf-8
 
 # Add Avatar in: Sidebar or page Hello, and configure.
