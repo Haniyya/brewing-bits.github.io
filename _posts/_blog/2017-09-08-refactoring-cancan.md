@@ -19,7 +19,7 @@ script: [post.js]
 {: toc}
 
 If you have a somewhat complicated set of authorization-rules in your system,
-your CanCan(Can) Abilities can become quite unwieldy. Here are some tips to
+your [CanCan(Can)][cancan] Abilities can become quite unwieldy. Here are some tips to
 make them more manageable.
 
 ## Use Arrays
@@ -28,7 +28,7 @@ There is an antipattern when using `CanCan::Ability`, that iterates over objects
 or verbs to define a bunch of rules that could be expressed a lot easier.
 Example:
 
-1. Bad
+### Bad:
 {% highlight ruby tabsize=4 %}
 # ability.rb
 
@@ -39,7 +39,7 @@ end
 
 This defining 3 rules, where only one is needed.
 
-2. Good
+### Good:
 {% highlight ruby tabsize=4 %}
 # ability.rb
 
@@ -58,7 +58,7 @@ can :ignore, [UserProfile, Admin]
 Block arguments to rules are slow and cannot be used in db-queries. If you can
 (and you won't always be able to) you should instead use hash-arguments:
 
-1. Bad
+### Bad:
 {% highlight ruby tabsize=4 %}
 # ability.rb
 
@@ -68,7 +68,7 @@ can :edit, Post do |post|
 end
 {% endhighlight %}
 
-2. Good
+### Good:
 {% highlight ruby tabsize=4 %}
 # ability.rb
 
@@ -81,7 +81,7 @@ If you use [Concerns][concerns] you can use that fact to skip tests in your
 rules. Since `CanCan` internally uses [`#kind_of?`][kind_of] to test for
 applicable rules, you can just as well pass modules as objects of your rules.
 
-1. Bad
+### Bad:
 {% highlight ruby tabsize=4 %}
 # ability.rb
 
@@ -90,19 +90,19 @@ can :message, [User, Admin] do |user|
 end
 {% endhighlight %}
 
-2. Good
+### Good:
 {% highlight ruby tabsize=4 %}
 # ability.rb
-# Assumin both User and Admin include a messageable concern to send them
+# Assuming both User and Admin include a messageable concern to send them
 # messages.
 
 can :message, Messageable
 {% endhighlight %}
 
-## User `cannot` for exceptions instead of blocks
+## Use `cannot` for exceptions instead of blocks
 
 If you have exceptions to a rule, or negative conditions, try to use `cannot`!
-1. Bad
+### Bad:
 {% highlight ruby tabsize=4 %}
 can :message, User
 
@@ -115,7 +115,7 @@ end
 
 Again, this is slow and not SQL compatible. Instead use something like this:
 
-2. Good
+### Good:
 {% highlight ruby tabsize=4 %}
 can %i(message block), User
 cannot :block, User, user_id: current_user.id
@@ -129,7 +129,7 @@ earlier ones.
 If you tried all of the above but somehow still have a file that is way to long,
 you can try to split it into multiple small abilities (you could call them
 faculties).
-1. Bad
+### Bad:
 {% highlight ruby tabsize=4 %}
 # ability.rb
 
@@ -148,7 +148,7 @@ class Ability
 end
 {% endhighlight %}
 
-2. Good
+### Good:
 {% highlight ruby tabsize=4 %}
 class Ability
   include CanCan::Ability
@@ -188,6 +188,7 @@ if you are feeling adventurous you can `gem open cancancan` and have a look into
 the source code yourself!
 {% endpost #9D9D9D %}
 
+[cancan]: https://github.com/CanCanCommunity/cancancan/
 [concerns]: http://api.rubyonrails.org/classes/ActiveSupport/Concern.html
 [kind_of]: https://ruby-doc.org/core-2.4.1/Object.html#method-i-kind_of-3F
 [cancan_practices]: https://github.com/CanCanCommunity/cancancan/wiki/Defining-Abilities:-Best-Practice
