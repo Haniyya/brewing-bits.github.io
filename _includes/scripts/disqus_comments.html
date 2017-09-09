@@ -1,6 +1,7 @@
 {% if dbase.userdata.disqus.username %}
 <div id="disqus_thread"></div>
 <script>
+var disqus_shortname = "brewing-bits-com";
 var disqus_config = function () {
   if(typeof(this.page) == "undefined"){
     this.page = {};
@@ -10,9 +11,9 @@ var disqus_config = function () {
   this.page.title = "{{page.title}}";
 };
 (function() {
-  var d = document, s = d.createElement('script');
-  s.src = 'https://brewing-bits-com.disqus.com/embed.js';
-  s.setAttribute('data-timestamp', +new Date());
+  var d = document, s = d.createElement("script");
+  s.src = "https://brewing-bits-com.disqus.com/embed.js";
+  s.setAttribute("data-timestamp", +new Date());
   (d.head || d.body).appendChild(s);
 })();
 </script>
