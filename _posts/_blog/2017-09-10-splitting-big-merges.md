@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "A way to split up big merge- or pull-requests"
-date:   2017-09-10 09:20:00 -0500
+date:   2017-09-10 09:20:00 +0100
 categories: blog
 tags: ['git', 'vim', 'rails', 'programming']
 published: true
