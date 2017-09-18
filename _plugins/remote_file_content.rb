@@ -4,14 +4,15 @@ require 'uri'
 module Jekyll
 
   class RemoteFileContent < Liquid::Tag
+    attr_reader :url
 
     def initialize(tag_name, markup, tokens)
-      url = markup
+      @url = markup
 
       puts 'Fetching content of url: ' + url
 
-      if url =~ URI::regexp
-        @content = fetchContent(url)
+      if @url =~ URI::regexp
+        @content = fetchContent
       else
         raise 'Invalid URL passed to RemoteFileContent'
       end
@@ -19,7 +20,7 @@ module Jekyll
       super
     end
 
-    def render(context)
+    def render(_context)
       if @content
         @content
       else
@@ -27,7 +28,8 @@ module Jekyll
       end
     end
 
-    def fetchContent(url)
+    def fetchContent
+      return %(You're in offline mode mate.\n Url: #{url}) if ENV['OFFLINE']
       Net::HTTP.get(URI.parse(URI.encode(url.strip)))
     end
   end
