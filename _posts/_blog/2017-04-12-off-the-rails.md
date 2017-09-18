@@ -8,11 +8,15 @@ published: true
 comments: true
 excerpted: |
   Although I still like rails, I always enjoyed to be free from the opinions of
-  this opinionated framework...
-
+  this opinionated framework...  
 # Does not change and does not remove 'script' variables
 script: [post.js]
 ---
+
+Oh hi mark! This is Part 1 in a multiple part series where we try to emancipate
+ourselves from Ruby on Rails by going back to basics! [Part 2][part_2] is
+already out if you want to have a look at database-setup! But if you like your
+stories to have chronological order, I suggest you read this one first.
 
 * Do not remove this line (it will not be displayed)
 {: toc}
@@ -208,11 +212,12 @@ $ curl http://localhost:9292/books
 {"books":[{"author":"J. R. R. Tolkien","title":"Lord of the Rings"}]}
 ```
 
-This should be enough for now. Watch out for part 2 where we will add real
-database persistence using [`sequel`][sequel].
+This should be enough for now. If you want you can continue reading [Part
+2][part_2] where we will add a database using [sequel][sequel] and [rake][rake].
 
 {% endpost #9D9D9D %}
 
+[part_2]: {{site.base_url}}{% post_url /_blog/2017-09-17-off-the-rails-2 %}
 [ruby_on_rails]: http://rubyonrails.org/
 [grape]: https://github.com/ruby-grape/grape
 [rake]: https://github.com/ruby/rake
