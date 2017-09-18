@@ -88,4 +88,8 @@ userdata:
         id: twitter
         icon: fa-twitter
         url: https://twitter.com/BrewingBits/
+      - title: Email
+        id: email
+        icon: fa-envelope
+        url: https://tinyletter.com/BrewingBits
 

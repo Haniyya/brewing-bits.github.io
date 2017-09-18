@@ -81,4 +81,11 @@
       }
     }
   }
+  .tinyletter {
+    a {
+      font-weight: $links-title-weight;
+      color: $color-links;
+      font-size: 1.0rem;
+    }
+  }
 }
