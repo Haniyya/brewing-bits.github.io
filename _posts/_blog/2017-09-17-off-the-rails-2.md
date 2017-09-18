@@ -312,6 +312,8 @@ It loads all variables you define in a `.env` file into the environment. Simple 
 that. It's a good idea not to start with the `.env` itself, but rather add a
 `.env.sample` file first that looks like this:
 ```bash
+# .env.sample
+
 PGUSER=
 PGPASS=
 PGDATABASE=
