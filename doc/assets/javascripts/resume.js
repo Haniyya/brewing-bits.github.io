@@ -1,0 +1,1 @@
+jQuery(document).ready(function(n){n("#btn-print").click(function(){return window.print(),!1})});
