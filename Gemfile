@@ -23,5 +23,4 @@ group :jekyll_plugins do
    gem "jemoji"
    gem "jekyll-email-protect"
    gem "jekyll-spotify-plugin"
-   gem "github-pages"
 end
