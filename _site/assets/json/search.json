@@ -1,0 +1,31 @@
+[
+  
+    {
+      "title"    : "Off the Rails! Part 2.",
+      "tags"     : "ruby, rails, grape, programming, sequel, postgres, sqlite",
+      "url"     : "/blog/off-the-rails-2/",
+      "date"     : "2017-09-15 05:16:01 -0100"
+    } ,
+  
+    {
+      "title"    : "A way to split up big merge- or pull-requests",
+      "tags"     : "git, vim, rails, programming",
+      "url"     : "/blog/splitting-big-merges/",
+      "date"     : "2017-09-10 09:20:00 +0100"
+    } ,
+  
+    {
+      "title"    : "Refactoring CanCan(Can) Abilities",
+      "tags"     : "ruby, rails, cancan, programming",
+      "url"     : "/blog/refactoring-cancan/",
+      "date"     : "2017-09-07 09:31:01 +0100"
+    } ,
+  
+    {
+      "title"    : "Off the Rails! Part 1.",
+      "tags"     : "ruby, rails, grape, programming",
+      "url"     : "/blog/off-the-rails/",
+      "date"     : "2017-09-06 05:16:01 -0100"
+    } 
+  
+]

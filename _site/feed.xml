@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <!-- Include Data Base  -->
+    
+    <title>Brewing Bits</title>
+    <description>Brewing delicious code for you.</description>
+    <link>https://haniyya.github.io/</link>
+    <atom:link href="https://haniyya.github.io/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Tue, 12 May 2020 22:10:26 +0200</pubDate>
+    <lastBuildDate>Tue, 12 May 2020 22:10:26 +0200</lastBuildDate>
+    <generator>Jekyll v3.4.5</generator>
+    
+      <item>
+        <title>Off the Rails! Part 2.</title>
+        <description>&lt;p&gt;Hail hydra! This is Part 2 in a multiple part series where we try to emancipate ourselves from Ruby on Rails by going back to basics! If you missed Part 1 where we implemented our API, you can just click &lt;a href=&quot;/blog/off-the-rails/&quot;&gt;here&lt;/a&gt;.&lt;/p&gt; &lt;p&gt;As always (in this series at least) you can come along for the ride by having a look at the &lt;a href=&quot;https://github.com/BrewingBits/off-the-rails&quot;&gt;git repository&lt;/a&gt;. Just clone the repo and checkout the &lt;code&gt;part2&lt;/code&gt; tag.&lt;/p&gt; &lt;ul id=&quot;markdown-toc&quot;&gt; &lt;li&gt;&lt;a href=&quot;#intro&quot; id=&quot;markdown-toc-intro&quot;&gt;Intro&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href=&quot;#adding-bundler&quot; id=&quot;markdown-toc-adding-bundler&quot;&gt;Adding Bundler&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href=&quot;#simplest-sequel&quot; id=&quot;markdown-toc-simplest-sequel&quot;&gt;Simplest Sequel&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href=&quot;#getting-an-interface-to-the-database&quot; id=&quot;markdown-toc-getting-an-interface-to-the-database&quot;&gt;Getting an interface to the database&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href=&quot;#connecting-all-the-bits&quot; id=&quot;markdown-toc-connecting-all-the-bits&quot;&gt;Connecting all the...</description>
+        <pubDate>Fri, 15 Sep 2017 08:16:01 +0200</pubDate>
+        <link>https://haniyya.github.io/blog/off-the-rails-2/</link>
+        <guid isPermaLink="true">https://haniyya.github.io/blog/off-the-rails-2/</guid>
+        
+        <tag>ruby</tag>
+        
+        <tag>rails</tag>
+        
+        <tag>grape</tag>
+        
+        <tag>programming</tag>
+        
+        <tag>sequel</tag>
+        
+        <tag>postgres</tag>
+        
+        <tag>sqlite</tag>
+        
+      </item>
+    
+      <item>
+        <title>A way to split up big merge- or pull-requests</title>
+        <description>&lt;p&gt;Working in a team, and having someone review your code, can take quite a while. Especially if your Merge- or Pull-Request makes a lot of changes. Here I’ll show a way to split one big merge request into several small, easy to review ones.&lt;/p&gt; &lt;ul id=&quot;markdown-toc&quot;&gt; &lt;li&gt;&lt;a href=&quot;#what-well-use&quot; id=&quot;markdown-toc-what-well-use&quot;&gt;What we’ll use&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href=&quot;#the-problem&quot; id=&quot;markdown-toc-the-problem&quot;&gt;The problem&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href=&quot;#the-solution&quot; id=&quot;markdown-toc-the-solution&quot;&gt;The solution&lt;/a&gt; &lt;ul&gt; &lt;li&gt;&lt;a href=&quot;#starting-the-rebase&quot; id=&quot;markdown-toc-starting-the-rebase&quot;&gt;Starting the rebase&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href=&quot;#getting-the-right-commits&quot; id=&quot;markdown-toc-getting-the-right-commits&quot;&gt;Getting the right commits&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href=&quot;#check-which-commits-you-actually-want&quot; id=&quot;markdown-toc-check-which-commits-you-actually-want&quot;&gt;Check which commits you actually want&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href=&quot;#the-todo-files-done&quot; id=&quot;markdown-toc-the-todo-files-done&quot;&gt;The TODO-file’s done&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href=&quot;#the-first-step-is-taken&quot; id=&quot;markdown-toc-the-first-step-is-taken&quot;&gt;The first step is taken&lt;/a&gt;&lt;/li&gt; &lt;/ul&gt; &lt;/li&gt; &lt;li&gt;&lt;a href=&quot;#conclusion&quot; id=&quot;markdown-toc-conclusion&quot;&gt;Conclusion&lt;/a&gt;&lt;/li&gt; &lt;/ul&gt; &lt;h2 id=&quot;what-well-use&quot;&gt;What we’ll...</description>
+        <pubDate>Sun, 10 Sep 2017 10:20:00 +0200</pubDate>
+        <link>https://haniyya.github.io/blog/splitting-big-merges/</link>
+        <guid isPermaLink="true">https://haniyya.github.io/blog/splitting-big-merges/</guid>
+        
+        <tag>git</tag>
+        
+        <tag>vim</tag>
+        
+        <tag>rails</tag>
+        
+        <tag>programming</tag>
+        
+      </item>
+    
+      <item>
+        <title>Refactoring CanCan(Can) Abilities</title>
+        <description>&lt;ul id=&quot;markdown-toc&quot;&gt; &lt;li&gt;&lt;a href=&quot;#use-arrays&quot; id=&quot;markdown-toc-use-arrays&quot;&gt;Use Arrays&lt;/a&gt; &lt;ul&gt; &lt;li&gt;&lt;a href=&quot;#bad&quot; id=&quot;markdown-toc-bad&quot;&gt;Bad:&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href=&quot;#good&quot; id=&quot;markdown-toc-good&quot;&gt;Good:&lt;/a&gt;&lt;/li&gt; &lt;/ul&gt; &lt;/li&gt; &lt;li&gt;&lt;a href=&quot;#prefer-hashes-to-blocks&quot; id=&quot;markdown-toc-prefer-hashes-to-blocks&quot;&gt;Prefer hashes to blocks&lt;/a&gt; &lt;ul&gt; &lt;li&gt;&lt;a href=&quot;#bad-1&quot; id=&quot;markdown-toc-bad-1&quot;&gt;Bad:&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href=&quot;#good-1&quot; id=&quot;markdown-toc-good-1&quot;&gt;Good:&lt;/a&gt;&lt;/li&gt; &lt;/ul&gt; &lt;/li&gt; &lt;li&gt;&lt;a href=&quot;#if-you-use-concerns-use-concerns&quot; id=&quot;markdown-toc-if-you-use-concerns-use-concerns&quot;&gt;If you use concerns, use concerns&lt;/a&gt; &lt;ul&gt; &lt;li&gt;&lt;a href=&quot;#bad-2&quot; id=&quot;markdown-toc-bad-2&quot;&gt;Bad:&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href=&quot;#good-2&quot; id=&quot;markdown-toc-good-2&quot;&gt;Good:&lt;/a&gt;&lt;/li&gt; &lt;/ul&gt; &lt;/li&gt; &lt;li&gt;&lt;a href=&quot;#use-cannot-for-exceptions-instead-of-blocks&quot; id=&quot;markdown-toc-use-cannot-for-exceptions-instead-of-blocks&quot;&gt;Use &lt;code&gt;cannot&lt;/code&gt; for exceptions instead of blocks&lt;/a&gt; &lt;ul&gt; &lt;li&gt;&lt;a href=&quot;#bad-3&quot; id=&quot;markdown-toc-bad-3&quot;&gt;Bad:&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href=&quot;#good-3&quot; id=&quot;markdown-toc-good-3&quot;&gt;Good:&lt;/a&gt;&lt;/li&gt; &lt;/ul&gt; &lt;/li&gt; &lt;li&gt;&lt;a href=&quot;#use-merge-to-extract-logic-from-your-main-ability&quot; id=&quot;markdown-toc-use-merge-to-extract-logic-from-your-main-ability&quot;&gt;Use &lt;code&gt;#merge&lt;/code&gt; to extract logic from your main ability&lt;/a&gt; &lt;ul&gt; &lt;li&gt;&lt;a href=&quot;#bad-4&quot; id=&quot;markdown-toc-bad-4&quot;&gt;Bad:&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href=&quot;#good-4&quot; id=&quot;markdown-toc-good-4&quot;&gt;Good:&lt;/a&gt;&lt;/li&gt; &lt;/ul&gt; &lt;/li&gt; &lt;li&gt;&lt;a href=&quot;#further-reading&quot; id=&quot;markdown-toc-further-reading&quot;&gt;Further Reading&lt;/a&gt;&lt;/li&gt; &lt;/ul&gt; &lt;p&gt;If you have a somewhat complicated set of authorization-rules in...</description>
+        <pubDate>Thu, 07 Sep 2017 10:31:01 +0200</pubDate>
+        <link>https://haniyya.github.io/blog/refactoring-cancan/</link>
+        <guid isPermaLink="true">https://haniyya.github.io/blog/refactoring-cancan/</guid>
+        
+        <tag>ruby</tag>
+        
+        <tag>rails</tag>
+        
+        <tag>cancan</tag>
+        
+        <tag>programming</tag>
+        
+      </item>
+    
+      <item>
+        <title>Off the Rails! Part 1.</title>
+        <description>&lt;p&gt;Oh hi mark! This is Part 1 in a multiple part series where we try to emancipate ourselves from Ruby on Rails by going back to basics! &lt;a href=&quot;/blog/off-the-rails-2/&quot;&gt;Part 2&lt;/a&gt; is already out if you want to have a look at database-setup! But if you like your stories to have chronological order, I suggest you read this one first.&lt;/p&gt; &lt;ul id=&quot;markdown-toc&quot;&gt; &lt;li&gt;&lt;a href=&quot;#intro&quot; id=&quot;markdown-toc-intro&quot;&gt;Intro&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href=&quot;#requirements&quot; id=&quot;markdown-toc-requirements&quot;&gt;Requirements&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href=&quot;#what-will-be-used&quot; id=&quot;markdown-toc-what-will-be-used&quot;&gt;What will be used&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href=&quot;#come-along-for-the-ride&quot; id=&quot;markdown-toc-come-along-for-the-ride&quot;&gt;Come along for the ride!&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href=&quot;#starting-real-simple&quot; id=&quot;markdown-toc-starting-real-simple&quot;&gt;Starting real simple&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href=&quot;#starting-with-grape&quot; id=&quot;markdown-toc-starting-with-grape&quot;&gt;Starting with grape&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href=&quot;#global-state&quot; id=&quot;markdown-toc-global-state&quot;&gt;Global State&lt;/a&gt;&lt;/li&gt; &lt;/ul&gt; &lt;h2 id=&quot;intro&quot;&gt;Intro&lt;/h2&gt; &lt;p&gt;After about 4-5...</description>
+        <pubDate>Wed, 06 Sep 2017 08:16:01 +0200</pubDate>
+        <link>https://haniyya.github.io/blog/off-the-rails/</link>
+        <guid isPermaLink="true">https://haniyya.github.io/blog/off-the-rails/</guid>
+        
+        <tag>ruby</tag>
+        
+        <tag>rails</tag>
+        
+        <tag>grape</tag>
+        
+        <tag>programming</tag>
+        
+      </item>
+    
+  </channel>
+</rss>
