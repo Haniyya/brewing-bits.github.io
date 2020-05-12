@@ -22,5 +22,4 @@ group :jekyll_plugins do
    gem "jekyll-tagging"
    gem "jemoji"
    gem "jekyll-email-protect"
-   gem "jekyll-spotify-plugin"
 end
